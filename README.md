@@ -10,5 +10,6 @@ public/index.php
 2.在bootstrap根据自己的table类配置 或者 直接在app/models/model.php（自己写逻辑哈）里配置
 3.自己寻找适合自己的table类，然后让model.php继承
 4.框架沿用TP的C方法和D方法
+
 # 配置项目各个路径
 可以根据需要修改LFrame/LFrame.php或者index.php
