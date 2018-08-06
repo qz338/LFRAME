@@ -26,7 +26,7 @@ class Loader{
         }else{
             
             //如果找不类就查找libary
-            $file = $dir . '/' . str_replace("\\", "/", LIB_PATH) . "/" . $class_file;
+            $file = $dir . '/' . str_replace("\\", "/", LIB_NAMESPACE) . "/" . $class_file;
             if (file_exists($file)) {
                 require_once $file;
                 return;

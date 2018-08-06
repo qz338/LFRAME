@@ -1,1 +1,36 @@
-1231
+<?php $this->display('common/header'); ?>
+<body>
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>标题</th>
+                <th class="min-tablet">主图</th>
+                <th class="min-tablet">品牌</th>
+                <th class="min-desktop">规格</th>
+                <th class="min-desktop">重量</th>
+                <th class="min-desktop">生产商</th>
+                <th class="min-desktop">批准文号</th>
+                <th class="min-desktop">处方药</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($list as $k => $vo) { ?>
+                <tr>
+                    <td><?php echo $k+1+(get("page", 1)-1)*20 ;  ?></td>
+                    <td><?php echo $vo["title"]; ?></td>
+                    <td><?php echo $vo["img_url"]; ?></td>
+                    <td><?php echo $vo["brand"]; ?></td>
+                    <td><?php echo $vo["spec"]; ?></td>
+                    <td><?php echo $vo["weight"]; ?></td>
+                    <td><?php echo $vo["vender"]; ?></td>
+                    <td><?php echo $vo["approval"]; ?></td>
+                    <td><?php echo $vo["drug_cate"]; ?></td>
+                </tr>                                        
+            <?php } ?>
+
+        </tbody>
+    </table>
+
+</body>
+</html>

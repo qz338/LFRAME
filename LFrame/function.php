@@ -1,6 +1,6 @@
 <?php
     function D($table){
-        $model = sprintf("%s\%sModel", MODEL_PATH, $table);
+        $model = sprintf("%s\%sModel", MODEL_NAMESPACE, $table);
         return new $model();
     }
 

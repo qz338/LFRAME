@@ -6,9 +6,9 @@
 
     //定义模型地址
     $model_path = APP_PATH."\\"."models";
-    define("MODEL_PATH", $model_path);
+    define("MODEL_NAMESPACE", $model_path);
     //定义libary地址
-    define("LIB_PATH", APP_PATH."\\"."library");
+    define("LIB_NAMESPACE", APP_PATH."\\"."library");
 
     //加载系统函数库
     require_once __DIR__.'/function.php';
@@ -70,10 +70,11 @@
     define("CONF_PATH", ROOT_PATH . "/" . APP_PATH."/"."conf/app.ini");
 
     //执行bootrap
-    $Bootstrap = "\\" . APP_PATH . "\\Bootstrap";
-    $Bootstrap::_initDB();
-
+    $Bootstrap =  "\\" . APP_PATH . "\\Bootstrap";
+    $Bootstrap = new $Bootstrap;
+    $Bootstrap->_initDB();
+    $Bootstrap->_initFun();
     $class = new $class();
     $class->init(__ACTION__);
-    //$class->{__ACTION__}();
+    //$class->{__ACTION__}Action();
 ?>
