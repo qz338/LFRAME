@@ -4,7 +4,7 @@
 采用命名空间
 没有多余的类，目录结构和yaf一模一样，详情参考yaf
 # 入口文件
-public/index.php
+public/index.php，需要php开启path_info,否则解析不出url
 # 配置数据库
 1.在app/conf/app.ini 写入数据库具体参数
 2.在bootstrap根据自己的table类配置 或者 直接在app/models/model.php（自己写逻辑哈）里配置
